@@ -1,0 +1,73 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.home {
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+    &__section {
+        display: flex;
+        min-width: 70%;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $bp-tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__hand {
+        margin-right: 2rem;
+
+        @media (max-width: $bp-tablet) {
+            margin-bottom: 2.5rem;
+            margin-right: 0;
+        }
+
+        @media (max-width: $bp-mobile) {
+            width: 300px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 230px;
+        width: 40%;
+
+        @media (max-width: $bp-tablet) {
+            width: 100%;
+            @include flex($align: center);
+        }
+    }
+
+    &__title {
+        flex: 1;
+        font-size: 2rem;
+        font-weight: 600;
+
+        @media (max-width: $bp-tablet) {
+            text-align: center;
+        }
+    }
+
+    &__score {
+        color: $text-color;
+        opacity: 0.5;
+        font-weight: 600;
+    }
+
+    &__button {
+        @include button();
+
+        @media (max-width: $bp-tablet) {
+            width: 100%;
+        }
+    }
+}

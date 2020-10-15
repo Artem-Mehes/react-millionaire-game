@@ -1,0 +1,106 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.answer-btn {
+    flex-basis: 40%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    background-color: inherit;
+
+    &:nth-child(odd) {
+        margin-right: 4.2rem;
+    }
+
+    @include hexagon(105%, 17px, -16px, 6px, -15px, 20px);
+
+    &:hover {
+        @include hexagon-colored($accent-color);
+    }
+
+    &__letter {
+        color: $accent-color;
+    }
+
+    &__text {
+        display: inline-block;
+        margin-left: .5rem;
+        text-transform: capitalize;
+        text-align: left;
+    }
+
+    &--selected { 
+        @include hexagon-colored($accent-color, $selected);
+
+        &:hover {
+            @include hexagon-colored($accent-color, $selected);
+        }
+    }
+
+    &--correct {
+        @include hexagon-colored($hexagon-correct-border, $correct);
+
+        &:hover {
+            @include hexagon-colored($hexagon-correct-border, $correct);
+        }
+    }
+
+    &--wrong {
+        @include hexagon-colored($hexagon-wrong-border, $wrong);
+
+        &:hover {
+            @include hexagon-colored($hexagon-wrong-border, $wrong);
+        }
+    }
+
+    @media (max-width: 1250px) {
+        &:nth-child(odd) {
+            margin-right: 0;
+        }
+
+        flex-basis: inherit;
+
+        .top-hexagon, 
+        .bottom-hexagon {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: $bp-mobile) {
+        .top-hexagon, 
+        .bottom-hexagon {
+            width: 110%;
+            left: -20px;
+        }
+
+        .top-hexagon::before {
+            left: -38px;
+        }
+
+        .bottom-hexagon::before {
+            right: -38px;
+        }
+
+        .top-hexagon::before, 
+        .bottom-hexagon::before {
+            width: 40px;
+        }
+
+        height: 56px;
+    }
+
+    @media (max-width: 450px) {
+        .top-hexagon, 
+        .bottom-hexagon {
+            width: 112%;
+        }
+    }
+
+    @media (max-width: 410px) {
+        .top-hexagon, 
+        .bottom-hexagon {
+            width: 115%;
+        }
+    }
+}
