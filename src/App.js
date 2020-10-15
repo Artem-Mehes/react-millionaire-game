@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import './styles/globalStyles.scss';
+import 'styles/globalStyles.scss';
 
-import Game from './components/Game';
-import HomeScreen from './components/HomeScreen';
+import Game from 'pages/Game';
+import HomeScreen from 'pages/HomeScreen';
 
 const App = () => {
     const [gameStarted, setGameStarted] = useState(false);

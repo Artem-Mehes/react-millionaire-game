@@ -1,0 +1,276 @@
+[{
+    "question":"HTML stands for",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"HyperText Markup Language"
+        },
+        {
+            "letter":"B",
+            "answer":"Holidays turn me lazy"
+        },
+        {
+            "letter":"C",
+            "answer":"How to meet ladies"
+        },
+        {
+            "letter":"D",
+            "answer":"Ham toast my love"
+        }
+    ],
+    "correct":["A"],
+    "reward": "$500"
+},
+{
+    "question":"How to impress a normal person?",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"money"
+        },
+        {
+            "letter":"B",
+            "answer":"happy Life"
+        },
+        {
+            "letter":"C",
+            "answer":"talents"
+        },
+        {
+            "letter":"D",
+            "answer":"using the terminal in front of a person"
+        }
+    ],
+    "correct":["D"],
+    "reward": "$1,000"
+},
+{
+    "question":"Who has the biggest birth rate",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"people"
+        },
+        {
+            "letter":"B",
+            "answer":"javaScript frameworks"
+        },
+        {
+            "letter":"C",
+            "answer":"rabbits"
+        },
+        {
+            "letter":"D",
+            "answer":"cockroaches"
+        }
+    ],
+    "correct":["B"],
+    "reward": "$2,000"
+},
+{
+    "question":"What's the heaviest thing in the world",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"planet earth"
+        },
+        {
+            "letter":"B",
+            "answer":"universe"
+        },
+        {
+            "letter":"С",
+            "answer":"node modules"
+        },
+        {
+            "letter":"D",
+            "answer":"bags after shopping"
+        }
+    ],
+    "correct":["С"],
+    "reward": "$4,000"
+},
+{
+    "question":"What is the worst headache",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"migraine"
+        },
+        {
+            "letter":"B",
+            "answer":"stress"
+        },
+        {
+            "letter":"C",
+            "answer":"sinusitis"
+        },
+        {
+            "letter":"D",
+            "answer":"reading another programmer's code"
+        }
+    ],
+    "correct":["D"],
+    "reward": "$8,000"
+},
+{
+    "question":"What to do when the code doesn't work?",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"scream at the computer"
+        },
+        {
+            "letter":"B",
+            "answer":"stack overflow"
+        },
+        {
+            "letter":"C",
+            "answer":"sleep"
+        },
+        {
+            "letter":"D",
+            "answer":"restart a computer"
+        }
+    ],
+    "correct":["C", "A", "B", "D"],
+    "reward": "$16,000"
+},
+{
+    "question":"Which computer is the best for showing the code",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"client computer"
+        },
+        {
+            "letter":"B",
+            "answer":"senior developer's computer"
+        },
+        {
+            "letter":"C",
+            "answer":"mom's computer"
+        },
+        {
+            "letter":"D",
+            "answer":"the one the code is working on"
+        }
+    ],
+    "correct":["D"],
+    "reward": "$32,000"
+},
+{
+    "question":"How to pass tests",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"write good code"
+        },
+        {
+            "letter":"B",
+            "answer":"let someone else write the code"
+        },
+        {
+            "letter":"C",
+            "answer":"delete tests"
+        },
+        {
+            "letter":"D",
+            "answer":"don't write tests"
+        }
+    ],
+    "correct":["C", "D"],
+    "reward": "$64,000"
+},
+{
+    "question":"How to write good code",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"copy from stack overflow"
+        },
+        {
+            "letter":"B",
+            "answer":"read books"
+        },
+        {
+            "letter":"C",
+            "answer":"practice a lot"
+        },
+        {
+            "letter":"D",
+            "answer":"go to courses"
+        }
+    ],
+    "correct":["A"],
+    "reward": "$125,000"
+},
+{
+    "question":"How to make sure you don't get fired from work?",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"be a cool specialist"
+        },
+        {
+            "letter":"B",
+            "answer":"give variables names that only you can understand"
+        },
+        {
+            "letter":"C",
+            "answer":"be proactive"
+        },
+        {
+            "letter":"D",
+            "answer":"try your best"
+        }
+    ],
+    "correct":["B"],
+    "reward": "$250,000"
+},
+{
+    "question":"After what you can call yourself a programmer?",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"you changed one line of code in open source project"
+        },
+        {
+            "letter":"B",
+            "answer":"after writing to-do-list app"
+        },
+        {
+            "letter":"C",
+            "answer":"got a job"
+        },
+        {
+            "letter":"D",
+            "answer":"you understand memes about developers"
+        }
+    ],
+    "correct":["D"],
+    "reward": "$500,000"
+},
+{
+    "question":"{} + [] === ?",
+    "answers":[
+        {
+            "letter":"A",
+            "answer":"What?"
+        },
+        {
+            "letter":"B",
+            "answer":"[object Object]"
+        },
+        {
+            "letter":"C",
+            "answer":"0"
+        },
+        {
+            "letter":"D",
+            "answer":"NaN"
+        }
+    ],
+    "correct":["A", "C"],
+    "reward": "$1,000,000"
+}]

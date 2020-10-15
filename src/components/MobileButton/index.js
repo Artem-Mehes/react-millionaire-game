@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './style.scss';
 
-const MobileBtn = ({ setOpenScore }) => {
+const MobileButton = ({ setOpenScore }) => {
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -21,4 +21,4 @@ const MobileBtn = ({ setOpenScore }) => {
     )
 };
 
-export default MobileBtn;
+export default MobileButton;

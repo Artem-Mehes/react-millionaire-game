@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import './style.scss';
-import questions from 'questions';
-import AnswerButton from '../AnswerButton';
-import MobileBtn from '../MobileBtn';
+import questions from 'data/questions.json';
+import AnswerButton from 'components/AnswerButton';
+import MobileBtn from 'components/MobileButton';
 
 const Game = ({ handleFinishGame, setScore }) => {
     const [questionNumber, setQuestionNumber] = useState(0);
@@ -23,8 +23,8 @@ const Game = ({ handleFinishGame, setScore }) => {
     return (
         <div className="game"> 
             <div className="game__inner">
-            <h2 className="game__title">{currentQuestion.question}</h2>
-
+                <h2 className="game__title">{currentQuestion.question}</h2>
+                
                 <div className="game__answers">
                     {currentQuestion.answers.map(item => {
                         return (
