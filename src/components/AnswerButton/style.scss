@@ -24,6 +24,7 @@
 
     &__letter {
         color: $accent-color;
+        z-index: 1;
     }
 
     &__text {
@@ -31,29 +32,30 @@
         margin-left: .5rem;
         text-transform: capitalize;
         text-align: left;
+        z-index: 1;
     }
 
     &--selected { 
-        @include hexagon-colored($accent-color, $selected);
+        @include hexagon-colored($accent-color, $selected-answer-color);
 
         &:hover {
-            @include hexagon-colored($accent-color, $selected);
+            @include hexagon-colored($accent-color, $selected-answer-color);
         }
     }
 
     &--correct {
-        @include hexagon-colored($hexagon-correct-border, $correct);
+        @include hexagon-colored($hexagon-correct-border, $correct-answer-color);
 
         &:hover {
-            @include hexagon-colored($hexagon-correct-border, $correct);
+            @include hexagon-colored($hexagon-correct-border, $correct-answer-color);
         }
     }
 
     &--wrong {
-        @include hexagon-colored($hexagon-wrong-border, $wrong);
+        @include hexagon-colored($hexagon-wrong-border, $wrong-answer-color);
 
         &:hover {
-            @include hexagon-colored($hexagon-wrong-border, $wrong);
+            @include hexagon-colored($hexagon-wrong-border, $wrong-answer-color);
         }
     }
 
@@ -127,7 +129,7 @@
         }
     }
 
-    @media (max-width: $bp-tablet) {
+    @media (max-width: 1018px) {
         .top-hexagon,
         .bottom-hexagon {
             width: 100%;
@@ -144,7 +146,7 @@
         }
     }
 
-    @media (max-width: $bp-mobile) {
+    @media (max-width: 510px) {
         height: 56px;
         width: 100%;
 

@@ -1,17 +1,17 @@
 @import './variables.scss';
 
-@mixin button() {
+@mixin home-button() {
     background-color: $accent-color;
     border-radius: .6rem;
     color: #fff;
     width: 296px;
 
     &:hover {
-        background-color: $hoverColor;
+        background-color: $hover-color;
     }
 
     &:active {
-        background-color: $activeColor;
+        background-color: $active-color;
     }
 }
 
@@ -24,7 +24,6 @@
 
 @mixin hexagon($width, $line-width, $line-left, $bor-rad, $line-right, $perspective) {
     position: relative;
-    z-index: 0;
 
     .top-hexagon,
     .bottom-hexagon {
@@ -33,7 +32,6 @@
         width: $width;
         left: 0px;
         height: 50%;
-        z-index: -1;
         background-color: #fff;
         border-radius: $bor-rad;
 

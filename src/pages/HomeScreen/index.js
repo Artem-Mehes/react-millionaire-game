@@ -1,38 +1,52 @@
 import React from 'react';
 
 import './style.scss';
-import background from 'images/game-start-bg.png';
+import { bool, string, func } from 'prop-types';
+import backgroundImg from 'images/game-start-bg.png';
 
-const HomeScreen = ({ gameFinished, setGameStarted, score }) => {
-    let title = '';
-    let btnText = '';
-
-    if (gameFinished) {
-        title = <>
-                    <p className="home__score">Total Score:</p>
-                    <h2 className="home__title">{`${score || '$0'} earned`}</h2>
-                </>;
-
-        btnText = 'Try Again';
-    } else {
-        title = <h1 className="home__title">Who wants to be a millionaire?</h1>;
-
-        btnText = 'Start';
-    }
-
+const HomeScreen = ({ gameFinished, setGameStarted, reward }) => {
     return (
-        <div className="home" style={gameFinished ? {} : { backgroundImage: `url(${background})` }}>
+        <div
+            className="home"
+            style={
+                gameFinished ? {} : { backgroundImage: `url(${backgroundImg})` }
+            }
+        >
             <section className="home__section">
-                <img className="home__hand" src={require('images/hand.svg')} alt="hand" />
+                <img
+                    className="home__hand"
+                    src={require('images/hand.svg')}
+                    alt="hand"
+                />
 
                 <div className="home__inner">
-                    {title}
+                    {gameFinished ? (
+                        <>
+                            <p className="home__score">Total Score:</p>
+                            <h2 className="home__title">{`${reward} earned`}</h2>
+                        </>
+                    ) : (
+                        <h1 className="home__title">
+                            Who wants to be a millionaire?
+                        </h1>
+                    )}
 
-                    <button className="home__button" onClick={() => setGameStarted(true)}>{btnText}</button>
+                    <button
+                        className="home__button"
+                        onClick={() => setGameStarted(true)}
+                    >
+                        {gameFinished ? 'Try Again' : 'Start'}
+                    </button>
                 </div>
             </section>
         </div>
-    )
-}
+    );
+};
+
+HomeScreen.propTypes = {
+    gameFinished: bool,
+    setGameStarted: func,
+    reward: string,
+};
 
 export default HomeScreen;

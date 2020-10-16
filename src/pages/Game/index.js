@@ -1,77 +1,78 @@
 import React, { useState } from 'react';
 
 import './style.scss';
+import { func } from 'prop-types';
 import questions from 'data/questions.json';
 import AnswerButton from 'components/AnswerButton';
 import MobileBtn from 'components/MobileButton';
+import RewardsList from 'components/RewardsList';
 
-const Game = ({ handleFinishGame, setScore }) => {
-    const [questionNumber, setQuestionNumber] = useState(0);
-    const [openScore, setOpenScore] = useState(false);
+const Game = ({ setGameFinished, setReward, setGameStarted }) => {
+	const [questionNumber, setQuestionNumber] = useState(0);
+	const [showRewards, setShowRewards] = useState(false);
 
-    const currentQuestion = questions[questionNumber];
-    const questionsLength = questions.length - 1;
+	const currentQuestion = questions[questionNumber];
+	const prevQuestionReward = questionNumber
+		? questions[questionNumber - 1].reward
+		: '$0';
 
-    const handleCorrectAnswer = () => {
-        if (questionNumber === questionsLength) {
-            handleFinishGame();
-        } else {
-            setQuestionNumber(prev => prev + 1);
-        }
-    };
+	const switchToNextQuestion = () => {
+		if (questionNumber === questions.length - 1) {
+			finishGame(currentQuestion.reward);
+		} else {
+			setQuestionNumber((prev) => prev + 1);
+		}
+	};
 
-    return (
-        <div className="game"> 
-            <div className="game__inner">
-                <h2 className="game__title">{currentQuestion.question}</h2>
-                
-                <div className="game__answers">
-                    {currentQuestion.answers.map(item => {
-                        return (
-                            <AnswerButton 
-                                key={item.letter} 
-                                letter={item.letter} 
-                                text={item.answer} 
-                                currentQuestion={currentQuestion}
-                                handleCorrectAnswer={handleCorrectAnswer}
-                                handleFinishGame={handleFinishGame}
-                                setScore={setScore}
-                            />
-                        );
-                    })}
-                </div>
-            </div>
+	const finishGame = (reward = prevQuestionReward) => {
+		setReward(reward);
+		setGameStarted(false);
+		setGameFinished(true);
+	};
 
-            <div className={`game__aside-wrapper ${openScore ? 'open' : ''}`}>
-                <aside className="game__rewards">
-                    <ul className="game__rewards-list rewards-list">
-                        {[...questions].reverse().map((question, i) => {
-                            const reward = question.reward;
-                            const reversedIndex = questionsLength - i;
-                            let state = '';
+	return (
+		<section className="game">
+			<div className="game__inner">
+				<h2 className="game__title">{currentQuestion.question}</h2>
 
-                            if (reversedIndex === questionNumber) {
-                                state = 'current';
-                            } else if (reversedIndex < questionNumber) {
-                                state = 'previous';
-                            }
+				<div className="game__answers">
+					{currentQuestion.answers.map((item) => {
+						return (
+							<AnswerButton
+								key={item.letter}
+								letter={item.letter}
+								text={item.answer}
+								currentQuestion={currentQuestion}
+								switchToNextQuestion={switchToNextQuestion}
+								finishGame={finishGame}
+							/>
+						);
+					})}
+				</div>
+			</div>
 
-                            return (
-                                <li className={`rewards-list__item ${state}`} key={reward}>
-                                    <span className="top-hexagon"></span>
-                                    {reward}
-                                    <span className="bottom-hexagon"></span>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </aside>
-            </div>
-            
+			<div
+				className={`game__overlay game__overlay--${
+					showRewards ? 'open' : ''
+				}`}
+			>
+				<aside className="game__rewards">
+					<RewardsList
+						rewards={questions.map((item) => item.reward).reverse()}
+						questionNumber={questionNumber}
+					/>
+				</aside>
+			</div>
 
-            <MobileBtn setOpenScore={setOpenScore} />
-        </div>
-    )
+			<MobileBtn setShowRewards={setShowRewards} />
+		</section>
+	);
+};
+
+Game.propTypes = {
+	setGameFinished: func,
+	setReward: func,
+	setGameStarted: func,
 };
 
 export default Game;
