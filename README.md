@@ -1,8 +1,16 @@
-### `npm install`
+# `"Who wants to be a millionaire?" game on react`
 
-Install dependencies<br />
+[Link to the project](https://artem-mehes.github.io/react-millionaire-game/)
 
-### `npm start`
+## `Instructions for installing and starting a project`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. npm install
+2. npm start
+
+## `Tech Stack`
+
+⋅⋅* React 
+⋅⋅* hooks 
+⋅⋅* node-sass 
+⋅⋅* prop-types
+
