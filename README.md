@@ -1,16 +1,16 @@
-# `"Who wants to be a millionaire?" game on react`
+## Who wants to be a millionaire?
 
 [Link to the project](https://artem-mehes.github.io/react-millionaire-game/)
 
-## `Instructions for installing and starting a project`
+### `Instructions for installing and starting a project`
 
 1. npm install
 2. npm start
 
-## `Tech Stack`
+### `Tech Stack`
 
-⋅⋅* React 
-⋅⋅* hooks 
-⋅⋅* node-sass 
-⋅⋅* prop-types
+* React 
+* hooks 
+* node-sass 
+* prop-types
 
