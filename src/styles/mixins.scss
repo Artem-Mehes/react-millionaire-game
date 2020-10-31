@@ -70,7 +70,6 @@
 }
 
 @mixin hexagon-colored($border-color, $bg-color: #fff) {
-    
     .top-hexagon,
     .bottom-hexagon {
         background-color: $bg-color;

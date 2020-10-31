@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './style.scss';
-import { string, func, shape, arrayOf } from 'prop-types';
+import { string, func, shape, arrayOf, object } from 'prop-types';
 
 const AnswerButton = ({
 	letter,
@@ -81,7 +81,9 @@ AnswerButton.propTypes = {
 	text: string,
 	currentQuestion: shape({
 		correct: arrayOf(string),
-		reward: string,
+        reward: string,
+        question: string,
+        answers: arrayOf(object)
 	}),
 	finishGame: func,
 	switchToNextQuestion: func,

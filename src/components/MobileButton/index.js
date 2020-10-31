@@ -23,7 +23,7 @@ const MobileButton = ({ setShowRewards }) => {
 };
 
 MobileButton.propTypes = {
-	setOpenScore: func,
+	setShowRewards: func,
 };
 
 export default MobileButton;

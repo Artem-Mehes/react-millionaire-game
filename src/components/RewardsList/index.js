@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './style.scss';
-import { array, number } from 'prop-types';
+import { string, arrayOf, number } from 'prop-types';
 
 const RewardsList = ({ rewards, questionNumber }) => {
 	const rewardsLength = rewards.length - 1;
@@ -34,7 +34,7 @@ const RewardsList = ({ rewards, questionNumber }) => {
 };
 
 RewardsList.propTypes = {
-	rewards: array,
+	rewards: arrayOf(string),
 	questionNumber: number,
 };
 
