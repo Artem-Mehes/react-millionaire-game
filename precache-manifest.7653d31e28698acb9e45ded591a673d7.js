@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "999369b8d08b76f423a74d634257273a",
+    "revision": "cc5a5d8d39fe51120db49f62831abe8e",
     "url": "/react-millionaire-game/index.html"
   },
   {
-    "revision": "77a7d0a07a58731ae00d",
-    "url": "/react-millionaire-game/static/css/main.20faf377.chunk.css"
+    "revision": "a8c13bde820a2b303f27",
+    "url": "/react-millionaire-game/static/css/main.0fc970f0.chunk.css"
   },
   {
     "revision": "58cc8559943affc987fa",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-millionaire-game/static/js/2.b3ec163f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "77a7d0a07a58731ae00d",
+    "revision": "a8c13bde820a2b303f27",
     "url": "/react-millionaire-game/static/js/main.89b8de8a.chunk.js"
   },
   {
